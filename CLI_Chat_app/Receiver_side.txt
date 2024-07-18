@@ -1,0 +1,27 @@
+[2024-07-18 01:53:59] hello 
+[2024-07-18 01:53:59] Message received: hello 
+[2024-07-18 01:54:18] Ritu
+[2024-07-18 01:54:18] Message received: Ritu
+[2024-07-18 02:07:06] Sender: hii
+[2024-07-18 02:07:11] Receiver: hello
+[2024-07-18 02:07:26] Sender: How are you Ritu
+[2024-07-18 02:07:40] Receiver: I am fine
+[2024-07-18 02:11:21] Sender: Hii Rishabh ..
+[2024-07-18 02:11:31] Receiver: Hello Ritu
+[2024-07-18 02:11:44] Sender: How are you ! 
+[2024-07-18 02:11:56] Receiver: I am fine Ritu
+[2024-07-18 02:12:17] Sender: It's Great Rishabh 
+[2024-07-18 02:18:43] Sender: hii
+[2024-07-18 02:18:55] Receiver: Hello Ritu
+[2024-07-18 02:19:09] Sender: Hello Rahul
+[2024-07-18 02:19:26] Receiver: How are you Ritu Saini
+[2024-07-18 02:19:39] Sender: I am fine Rahul
+[2024-07-18 02:20:08] Receiver: Thank you for connecting Ritu
+[2024-07-18 02:20:20] Sender: Welcome Rahul
+[2024-07-18 02:25:41] Sender: Hello Arjun
+[2024-07-18 02:25:53] Receiver: Hiii Ritu Saini
+[2024-07-18 02:26:10] Sender: How are you Arjun
+[2024-07-18 02:26:18] Receiver: I am fine Ritu
+[2024-07-18 02:26:27] Sender: Where from you
+[2024-07-18 02:26:42] Receiver: I am from Jaipur
+[2024-07-18 02:26:50] Sender: ok
