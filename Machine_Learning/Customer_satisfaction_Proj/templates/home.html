@@ -1,131 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Single Page Scroll with Animation</title>
-    <link rel="stylesheet" href="/static/styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <div class="navbar">
-        <a href="#project">Project</a>
-        <a href="#description">Description</a>
-        <a href="#about">About</a>
-        <a href="#Thanking">Arigato</a>
+
+<body style="background-color:lightskyblue">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Customer Satisfaction Project</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <br><br>
+
+    <div class="d-flex gap-2 justify-content-center py-5">
+        <a class="btn btn-primary btn-lg" href="/project" role="button">Go to Project</a>
+        <svg class="bi ms-1" width="20" height="20"><use xlink:href="#arrow-right-short"></use></svg>
+        </button>
     </div>
 
-    <div id="projects" class="section">
-        <div class="cust">
-            <img src="/static/customer-experience-creative-collage (1)-Photoroom.png" alt="Customer Experience">
-        </div>
-        <div class="pro">
-            <h1>
-                Customer Satisfaction
-            </h1>
-            <p>
-                by Ritu Saini :)
-            </p>
-        </div>
-        <a href="/project" class="project-btn">Project Explore</a>
-        
-    </div>
-
-    <div id="description" class="section">
-        <div class="description-container">
-            <div class="image-card card">
-                <img src="/static/five-gold-rating-stars-3d-hand-Photoroom.png" alt="Project Image">
-            </div>
-            
-            <div class="text-content">
-                <div class="card">
-                    <h1>I have explored the dataset and, utilizing logistic regression, developed the "Customer Satisfaction" project.<br> This project aims to predict customer satisfaction based on various factors within the dataset.</h1>
-                </div>
-        
-                <div class="card">
-                    <ul>
-                        Tools and Libraries Used:
-                        <br><br><li>NumPy: For numerical operations and handling array-based computations.</li>
-                        <li>Pandas: To load, manipulate, and analyze the dataset efficiently.</li>
-                        <li>Matplotlib: For creating static, interactive, and animated visualizations to understand the data better.</li>
-                        <li>Seaborn: For making attractive and informative statistical graphics.</li>
-                        <li>OS: For handling file operations and directory management.</li>
-                        <li>Joblib: For saving and loading the machine learning model and other large data structures efficiently.</li>
-                    </ul>
-                </div>
-        
-                <div class="card">
-                    <p>Customer satisfaction analysis uses data science and machine learning to improve customer experiences. By collecting and preprocessing feedback, exploring data trends, and applying machine learning models, businesses can gain valuable insights into customer sentiment. This analysis helps in predicting satisfaction levels and identifying key factors influencing customer experiences, enabling more effective strategies to enhance overall satisfaction.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-        
-    <div id="about" class="section">
-        <div class="about-card">
-            <div class="card small-card">
-                <img src="/static/WhatsApp Image 2024-07-31 at 17.49.22_c3af1c3b.jpg" alt="Your Photo">
-            </div>
-            <div class="card small-card">
-                <h2>About Me</h2>
-                <p>🚀 Hi, Future Innovator! 🌟</p>
-                <p>I'm a Software Engineer, Web Developer, and Data Scientist, currently studying Computer Science at PIET, Jaipur (Class of 2022).</p>
-                <p>🌐 From Bihar, born on December 12, 2004.</p>
-                <p>💻 Skilled in C, C++, Python, Flask, Java, JS, HTML, CSS, Bootstrap, PHP, Pandas, Numpy and MySQL. I turn code into functional creations.</p>
-                <p>🚀 I specialize in backend development and love challenges that push tech boundaries.</p>
-                <p>🎮 Outside coding, I'm an anime fan, exploring fantastical worlds for inspiration.</p>
-                <p>Let's innovate and make the digital world amazing! 🔥✨</p>
-            </div>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/rituraj-singh-530876278/" target="_blank" class="social-card">
-                    <img src="/static/image.png" alt="LinkedIn">
-                </a>
-                <a href="https://github.com/RiturajS12" target="_blank" class="social-card">
-                    <img src="/static/image3.png" alt="GitHub">
-                </a>
-                <a href="https://www.instagram.com/_its_rrj" target="_blank" class="social-card">
-                    <img src="/static/image1.png" alt="Instagram">
-                </a>
-            </div>
-        </div>
-    </div>
-    
-    <div id="Thanking" class="section">
-        <h1>Thank you!!</h1>
-        <p>
-            for giving ur time to us...
+    <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+        <div class=" container-fluid py-5 ">
+            <h1 class="display-5 fw-bold ">My Profile</h1>
             <br>
-            we will meet again!!
-        </p>
+
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" style="display: inline-flex;">
+                <div class="col ">
+                    <div class="card shadow-sm ">
+                        <a href="#"><img src="static/about-pic.jpg" class="img-responsive" alt="" /></a>
+                        <div class="card-body ">
+                            <p class="card-text ">
+                                <h4>Ritu Saini , Data Science Intern</h4>
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center ">
+                                <div class="btn-group ">
+                                    <button type="button " class="btn btn-sm btn-outline-secondary ">View</button>
+                                    <button type="button " class="btn btn-sm btn-outline-secondary ">Edit</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="h-300 p-5 text-bg-dark rounded-3 ">
+                        <h2>About Me</h2>
+                        <p>Hello <br> My Name is Ritu Saini from jaipur, Rajasthan 302017. I have completed my schooling from jaipur rajasthan and currently I am pursing b.tech from Poornima Institute of Engineering and technology from Computer Science Branch
+                            with Specialization "Artificial Intelligence and Data Science " I am a Data Sciene Intern at DataPlay and upflairs. I have much knowledge abour Python libraries and other classification, Regression problems. <br> I have much
+                            knowledge about programming languages and some frameworks like- C , C++ , Python , Python Django , Html , CSS ,Bootstrap, Canva ,MySql ,Web Development ,Machine Learning and Cloud Computing , Github etc.
+                        </p>
+                        <button class="btn btn-outline-light " type="button ">Know more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <script>
-        
-const sections = document.querySelectorAll('.section');
+    </div>
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        } else {
-            entry.target.classList.remove('visible');
-        }
-    });
-}, {
-    threshold: 0.1
-});
+    <div class="p-5 mb-4 bg-body-tertiary rounded-3 ">
+        <div class="container-fluid py-5 ">
+            <h1 class="display-5 fw-bold ">Description</h1>
+            <p class="col-md-8 fs-4 ">The goal of this project is to develop a logistic regression model that can predict whether the customer is satisfied or not based on various factors such as Inflight entertainment, Baggage handling, Cleanliness, Departure, Departure Delay,
+                Arrival Delay, etc. The model will be trained on a dataset of historical weather data and will be evaluated based on its accuracy in predicting the weather.
+                <br><br> Logistic regression is a type of regression analysis used for predicting the outcome of a categorical dependent variable, based on one or more predictor variables. It is a widely used machine learning algorithm in data science
+                and statistics. </p>
+            <button class="btn btn-primary btn-lg " type="button ">Know more</button>
+        </div>
+    </div>
 
-sections.forEach(section => {
-    observer.observe(section);
-});
 
-document.querySelectorAll('.navbar a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-    </script>
+
+
+    <footer class="jumbotron text-center" style="margin-top: 50px; margin-bottom: 50px;">
+        <h1 class="display-4"><b>Thank You for Visiting!</b></h1>
+    </footer>
+
+    <footer>
+        <div class="container ">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top ">
+                <div class="col-md-4 d-flex align-items-center ">
+                    <a href="/ " class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1 ">
+                        <svg class="bi " width="30 " height="24 "><use xlink:href="#bootstrap"></use></svg>
+                    </a>
+                    <span class="mb-3 mb-md-0 text-body-secondary "><h5>Ritu Saini @ 2024 From PIET, Collage</h5></span>
+                </div>
+
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex ">
+                    <li class="ms-3 "><a class="text-body-secondary " href="https://github.com/ritu-25 "><svg class="bi " width="24 " height="24 "><use xlink:href="#github "></use></svg><h4>GitHub</h4></a></li>
+                    <li class="ms-3 "><a class="text-body-secondary " href="https://www.linkedin.com/in/ritu-saini-790708226/ "><svg class="bi " width="24 " height="24 "><use xlink:href="#linkdin "></use></svg><h4>Linkdin</h4></a></li>
+                    <li class="ms-3 "><a class="text-body-secondary " href="# "><svg class="bi " width="24 " height="24 "><use xlink:href="#instagram "></use></svg><h4>Instagram</h4></a></li>
+                </ul>
+            </footer>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js " integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r " crossorigin="anonymous "></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js " integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy " crossorigin="anonymous "></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz " crossorigin="anonymous "></script>
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- https://github.com/upflairs-pvt-ltd/3rd_july_datascience/tree/master/customer_satisfaction -->

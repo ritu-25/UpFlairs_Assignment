@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Insurance Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: lightsteelblue;
+        }
+        
+        .navbar {
+            background-color: #343a40;
+        }
+        
+        .navbar a {
+            color: #fff !important;
+        }
+        
+        .navbar a:hover {
+            color: #ccc !important;
+        }
+        
+        .jumbotron {
+            background: url('static/insurance.webp') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            padding: 150px 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        
+        .jumbotron .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        
+        .jumbotron .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        
+        #about {
+            padding: 50px 0;
+            background-color: #f8f9fa;
+        }
+        
+        #about h2 {
+            margin-bottom: 30px;
+        }
+        
+        #about p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .about-me {
+            display: flex;
+            align-items: center;
+            padding: 50px 0;
+        }
+        
+        .about-me img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-right: 30px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .about-me p {
+            margin: 0;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .social-links {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px;
+        }
+        
+        .social-links li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        
+        .social-links a {
+            color: #fff;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            color: #ccc;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Insurance Charges Prediction</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/records">History</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <br><br>
+
+    <div class="d-flex gap-2 justify-content-center py-5">
+        <a class="btn btn-primary btn-lg" href="/project" role="button">Check Insurance charegs</a>
+        <svg class="bi ms-1" width="20" height="20"><use xlink:href="#arrow-right-short"></use></svg>
+        </button>
+    </div>
+
+    <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+        <div class=" container-fluid py-5 ">
+            <h1 class="display-5 fw-bold ">My Profile</h1>
+            <br>
+
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" style="display: inline-flex;">
+                <div class="col ">
+                    <div class="card shadow-sm ">
+                        <a href="#"><img src="static/about-pic.jpg" class="img-responsive" alt="" /></a>
+                        <div class="card-body ">
+                            <p class="card-text ">
+                                <h4>Ritu Saini , Data Science Intern</h4>
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center ">
+                                <div class="btn-group ">
+                                    <button type="button " class="btn btn-sm btn-outline-secondary ">View</button>
+                                    <button type="button " class="btn btn-sm btn-outline-secondary ">Edit</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="h-300 p-5 text-bg-dark rounded-3 ">
+                        <h2>About Me</h2>
+                        <p>Hello <br> My Name is Ritu Saini from jaipur, Rajasthan 302017. I have completed my schooling from jaipur rajasthan and currently I am pursing b.tech from Poornima Institute of Engineering and technology from Computer Science Branch
+                            with Specialization "Artificial Intelligence and Data Science " I am a Data Sciene Intern at DataPlay and upflairs. I have much knowledge abour Python libraries and other classification, Regression problems. <br> I have much
+                            knowledge about programming languages and some frameworks like- C , C++ , Python , Python Django , Html , CSS ,Bootstrap, Canva ,MySql ,Web Development ,Machine Learning and Cloud Computing , Github etc.
+                        </p>
+                        <button class="btn btn-outline-light " type="button ">Know more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="p-5 mb-4 bg-body-tertiary rounded-3 ">
+        <div class="container-fluid py-5 ">
+            <h1 class="display-5 fw-bold ">Description</h1>
+            <p class="col-md-8 fs-4 ">The objective of this project is to predict insurance charges based on various factors using machine learning models. We will employ Decision Tree and Random Forest algorithms to build and evaluate our predictive models. The factors considered
+                for prediction include age, gender, BMI (Body Mass Index), number of children, smoking status, and region. The goal of this project is to develop a Randomforest ,DecisionTree and Linear model that can predict whether the insurance charges
+                based on various factors such as age ,gender,prediction , smoker,bmi etc. The model will be trained on a dataset of insurance data and will be evaluated based on its accuracy in predicting the insurance charges.
+                <br><br> A Decision Tree is a supervised learning algorithm that can be used for both classification and regression tasks. It works by splitting the data into subsets based on the value of input features, creating a tree-like structure
+                of decisions. Each node in the tree represents a feature, each branch represents a decision rule, and each leaf node represents an outcome. Decision Trees are easy to interpret and visualize, but they can be prone to overfitting, especially
+                with complex datasets. <br> Random Forest:
+                <br> Random Forest is an ensemble learning method that combines multiple Decision Trees to produce a more robust and accurate model. It works by creating multiple Decision Trees during training and outputting the mean prediction (regression)
+                or mode prediction (classification) of the individual trees. Random Forest reduces the risk of overfitting and improves generalization by averaging the results of many trees, each trained on different subsets of the data.
+            </p>
+            </p>
+            <button class="btn btn-primary btn-lg " type="button ">Know more</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <h4 class="display-4"><b>Thank You for Visiting!</b></h4>
+        <ul class="social-links">
+            <li>
+                <a href="?igsh=OHdtb2UzNGRpbnd5" class="fab fa-instagram"></a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/ritu-saini-790708226/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="fab fa-linkedin"></a>
+            </li>
+            <li>
+                <a href="https://github.com/ritu-25" class="fab fa-github"></a>
+            </li>
+        </ul>
+        <p>&copy; sainiritu132@gmail.com</p>
+    </footer>
+
+
+
+
+    <footer>
+        <div class="container ">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top ">
+                <div class="col-md-4 d-flex align-items-center ">
+                    <a href="/ " class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1 ">
+                        <svg class="bi " width="30 " height="24 "><use xlink:href="#bootstrap"></use></svg>
+                    </a>
+                    <span class="mb-3 mb-md-0 text-body-secondary "><h5>Ritu Saini @ 2024 From PIET, Collage</h5></span>
+                </div>
+
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex ">
+                    <li class="ms-3 "><a class="text-body-secondary " href="https://github.com/ritu-25 "><svg class="bi " width="24 " height="24 "><use xlink:href="#github "></use></svg><h4>GitHub</h4></a></li>
+                    <li class="ms-3 "><a class="text-body-secondary " href="https://www.linkedin.com/in/ritu-saini-790708226/ "><svg class="bi " width="24 " height="24 "><use xlink:href="#linkdin "></use></svg><h4>Linkdin</h4></a></li>
+                    <li class="ms-3 "><a class="text-body-secondary " href="# "><svg class="bi " width="24 " height="24 "><use xlink:href="#instagram "></use></svg><h4>Instagram</h4></a></li>
+                </ul>
+            </footer>
+        </div>
+        
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMN7olbyLHz2e7kL5owd7FOJLh6y1bi6Q7aJ1tJmMvVGwRTplp8ZwlEoXmfgnnX9" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9CNv+N82cU4bIaz8+K3zYlZ+zK2H+YGga0AJ9A1f4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js " integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r " crossorigin="anonymous "></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js " integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy " crossorigin="anonymous "></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz " crossorigin="anonymous "></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- https://github.com/upflairs-pvt-ltd/3rd_july_datascience/tree/master/customer_satisfaction -->

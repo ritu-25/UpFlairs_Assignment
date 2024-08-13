@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Price Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url('https://images.unsplash.com/photo-1645752401644-7e519168c71a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE3fENEd3V3WEpBYkV3fHxlbnwwfHx8fHw%3D');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 360vh;
+        }
+        
+        header {
+            background-color: lightskyblue;
+            color: black;
+            padding: 1em;
+            text-align: center;
+            background-image: url('https://images.unsplash.com/photo-1645752401644-7e519168c71a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDE3fENEd3V3WEpBYkV3fHxlbnwwfHx8fHw%3D');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        nav {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+        
+        footer {
+            background-color: lightcyan;
+            text-align: center;
+            padding: 1em;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+        
+        .form-container {
+            margin: 2em auto;
+            max-width: 900px;
+        }
+        
+        .form-label {
+            font-weight: bold;
+        }
+        
+        .btn-secondary {
+            margin-right: 1em;
+        }
+        
+        .btn-blue {
+            background-color: #007bff;
+            border: none;
+            color: white;
+        }
+        
+        .btn-blue:hover {
+            background-color: #0056b3;
+        }
+        
+        @media (max-width: 600px) {
+            .form-container {
+                margin: 1em;
+            }
+        }
+        
+        .intro {
+            text-align: center;
+            margin: 2em 0;
+        }
+        
+        .amazon-laptops {
+            margin: 2em auto;
+            max-width: 1200px;
+        }
+        
+        .laptop-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1em;
+        }
+        
+        .laptop-item {
+            border: 1px solid #ddd;
+            padding: 1em;
+            text-align: center;
+            overflow: hidden;
+            /* Ensure content doesn't overflow */
+        }
+        
+        .laptop-item img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .laptop-item h3 {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .laptop-item img.large {
+            width: 300px;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 800px) {
+            .laptop-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 600px) {
+            nav ul li {
+                display: block;
+                margin: 0.5em 0;
+            }
+            .laptop-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Laptop Price Prediction</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">LAPTOP PRICE PREDICTON</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/output">Output</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/project">Project</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <div class="p-5 mb-4 bg-body-tertiary rounded-3 ">
+            <section class="py-5 text-center container">
+                <div class="row py-lg-5">
+                    <div class="col-lg-6 col-md-8 mx-auto">
+                        <h1><b>WELCOME TO LAPTOP MAKER's</b></h1>
+                        <p class="lead text-body-secondary">
+                            <h4><b>Discover Your Perfect Laptop at Our Showroom</b></h4>
+
+                            <b>Explore the latest in technology with our wide range of laptops designed to meet every need. Whether you're a professional, a student, or a creative enthusiast, our expert team is here to help you find the perfect match. Experience the power, performance,
+                            and innovation that drive productivity and inspire creativity. Visit us today and take the first step towards your next great adventure!</b> </p>
+                        <p>
+                            <a href="/project" class="btn btn-primary my-2">Price Prediction</a>
+                            <a href="/output" class="btn btn-secondary my-2">Predicted Cost</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="container my-0">
+                <h2 class="cardtitle text-center my-3 py-3"><b>Our Latest Laptop</b></h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://images.unsplash.com/photo-1651169610763-fddf392fadb4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGxhcHRvcHN8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Acer Aspire</h5>
+                                <p class="card-text">Acer Aspire 7 Gaming</p>
+                                <a href="#" class="btn btn-primary">Knew More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://images.unsplash.com/photo-1517430868310-0bc91ef7d89a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGFwdG9wc3xlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">MacBook Air 15</h5>
+                                <p class="card-text">MacBook Air 15</p>
+                                <a href="#" class="btn btn-primary">Knew More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://media.istockphoto.com/id/1407857093/photo/mockup-of-laptop-computer-with-empty-screen-with-coffee-cup-and-smartphone-on-table-of-the.webp?b=1&s=170667a&w=0&k=20&c=ck1vwV8dl9GlvvN80Js9hE2GX5oduy1IoiF3hFV-cQg=" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Acer Aspire 7</h5>
+                                <p class="card-text">Acer Aspire 7</p>
+                                <a href="#" class="btn btn-primary">Knew More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="container my-0">
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://images.unsplash.com/photo-1651169610763-fddf392fadb4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGxhcHRvcHN8ZW58MHx8MHx8fDA%3D" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Lenovo Ideapad</h5>
+                                <p class="card-text">Samsung</p>
+                                <a href="#" class="btn btn-primary">Knew More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://images.unsplash.com/photo-1517430868310-0bc91ef7d89a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGFwdG9wc3xlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">HP Victus</h5>
+                                <p class="card-text">HP Victus</p>
+                                <a href="#" class="btn btn-primary">Knew More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://media.istockphoto.com/id/1407857093/photo/mockup-of-laptop-computer-with-empty-screen-with-coffee-cup-and-smartphone-on-table-of-the.webp?b=1&s=170667a&w=0&k=20&c=ck1vwV8dl9GlvvN80Js9hE2GX5oduy1IoiF3hFV-cQg=" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">HP Pavilion</h5>
+                                <p class="card-text">HP Pavilion</p>
+                                <a href="#" class="btn btn-primary">Knew More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+        <div class=" container-fluid py-5 ">
+            <h1 class="display-5 fw-bold ">My Profile</h1>
+            <br>
+
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" style="display: inline-flex;">
+                <div class="col ">
+                    <div class="card shadow-sm ">
+                        <a href="#"><img src="static/about-pic.jpg" class="img-responsive" width="100%" height="350px" alt="" /></a>
+                        <div class="card-body ">
+                            <p class="card-text ">
+                                <h4>Ritu Saini , Data Science Intern</h4>
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center ">
+                                <div class="btn-group ">
+                                    <button type="button " class="btn btn-sm btn-outline-secondary ">View</button>
+                                    <button type="button " class="btn btn-sm btn-outline-secondary ">Edit</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="h-300 p-5 text-bg-dark rounded-3 ">
+                        <h2>About Me</h2>
+                        <p>Hello <br> My Name is Ritu Saini from jaipur, Rajasthan 302017. I have completed my schooling from jaipur rajasthan and currently I am pursing b.tech from Poornima Institute of Engineering and technology from Computer Science Branch
+                            with Specialization "Artificial Intelligence and Data Science " I am a Data Sciene Intern at DataPlay and upflairs. I have much knowledge abour Python libraries and other classification, Regression problems. <br> I have much
+                            knowledge about programming languages and some frameworks like- C , C++ , Python , Python Django , Html , CSS ,Bootstrap, Canva ,MySql ,Web Development ,Machine Learning and Cloud Computing , Github etc.
+                        </p>
+                        <button class="btn btn-outline-light " type="button ">Know more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+    <br><br>
+    <footer>
+        <div class="container ">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top ">
+                <div class="col-md-4 d-flex align-items-center ">
+                    <a href="/ " class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1 ">
+                        <svg class="bi " width="30 " height="24 "><use xlink:href="#bootstrap"></use></svg>
+                    </a>
+                    <span class="mb-3 mb-md-0 text-body-secondary "><h5>Ritu Saini @ 2024 From PIET, Collage</h5></span>
+                </div>
+
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex ">
+                    <li class="ms-3 "><a class="text-body-secondary " href="https://github.com/ritu-25 "><svg class="bi " width="24 " height="24 "><use xlink:href="#github "></use></svg><h4>GitHub</h4></a></li>
+                    <li class="ms-3 "><a class="text-body-secondary " href="https://www.linkedin.com/in/ritu-saini-790708226/ "><svg class="bi " width="24 " height="24 "><use xlink:href="#linkdin "></use></svg><h4>Linkdin</h4></a></li>
+                    <li class="ms-3 "><a class="text-body-secondary " href="# "><svg class="bi " width="24 " height="24 "><use xlink:href="#instagram "></use></svg><h4>Instagram</h4></a></li>
+                </ul>
+            </footer>
+        </div>
+
+
+        <footer>
+            <p>&copy; 2024 LAPTOP PRICE PREDICTION. All rights reserved.</p>
+        </footer>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
