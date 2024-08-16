@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            position: relative;
+            background: url('https://media.istockphoto.com/id/1333063467/photo/minimal-abstract-background-for-product-presentation-leaf-shadow-on-yellow-plaster-wall.webp?b=1&s=612x612&w=0&k=20&c=wWSROJMDvkAtJgpnDPUTmfxNKcPRTZNp6X6rXzh5EA4=') no-repeat center center fixed;
+            background-size: cover;
+            padding-top: 20px;
+        }
+        
+        .navbar {
+            background-color: #343a40;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        
+        .navbar-brand {
+            color: #ffffff !important;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+        
+        .content-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            font-weight: bold;
+            color: #343a40;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .form-floating {
+            margin-top: 20px;
+        }
+        
+        .form-control {
+            height: 150px;
+            resize: none;
+            padding: 20px;
+        }
+        
+        .btn-primary {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+    </style>
+
+    <title>Email Spam Classifier</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Email Classification</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Output</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header style="margin-top: 90px;">
+        <h2><b>Email Spam Classification</b></h2>
+    </header>
+    <!-- Input form -->
+    <div class="container content-container" style="margin: top 10px; width: 50%; ">
+        <h2>Email Prediction Application</h2>
+        <h2 class="text-center mt-3">Write Your message to predicted your email is Spam or Ham ..... </h2>
+        <form action="{{ url_for('predict') }}" method="POST">
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Write your mail here.." id="email" name="email" required style="height: 200px;"></textarea>
+                <label for="email">Write your email here...</label>
+            </div>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+    <br><br><br><br><br>
+
+    <footer>
+        <div class="container ">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top ">
+                <div class="col-md-4 d-flex align-items-center ">
+                    <a href="/ " class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1 ">
+                        <svg class="bi " width="30 " height="24 "><use xlink:href="#bootstrap"></use></svg>
+                    </a>
+                    <span class="mb-3 mb-md-0 text-body-secondary "><h5>Ritu Saini @ 2024 From PIET, Collage</h5></span>
+                </div>
+
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex ">
+                    <li class="ms-3 "><a class="text-body-secondary " href="https://github.com/ritu-25 "><svg class="bi " width="24 " height="24 "><use xlink:href="#github "></use></svg><h4>GitHub</h4></a></li>
+                    <li class="ms-3 "><a class="text-body-secondary " href="https://www.linkedin.com/in/ritu-saini-790708226/ "><svg class="bi " width="24 " height="24 "><use xlink:href="#linkdin "></use></svg><h4>Linkdin</h4></a></li>
+                    <li class="ms-3 "><a class="text-body-secondary " href="# "><svg class="bi " width="24 " height="24 "><use xlink:href="#instagram "></use></svg><h4>Instagram</h4></a></li>
+                </ul>
+            </footer>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMN7olbyLHz2e7kL5owd7FOJLh6y1bi6Q7aJ1tJmMvVGwRTplp8ZwlEoXmfgnnX9" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9CNv+N82cU4bIaz8+K3zYlZ+zK2H+YGga0AJ9A1f4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js " integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r " crossorigin="anonymous "></script>
+
+        <!-- Bootstrap JS and dependencies -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD2tf5OgqgNSYXj7mB8nvKqt1cy1N1vlZlZR+SB6Yl4mQD/aVTKMxmcTZV8Uwf" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq2+9Thty5KVphtB8mKMRSLZ+kDlzO/cpshGz7U3pGZfNfNE2p" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
